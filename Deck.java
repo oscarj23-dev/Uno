@@ -55,6 +55,16 @@ public class Deck {
         Collections.shuffle(deck);
     }
 
+    public Card dealCard() {
+        if (deck.isEmpty())
+            return null;
+        return deck.remove(0);
+    }
+
+    public boolean isEmpty() {
+        return deck.isEmpty();
+    }
+
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for (Card card : deck) {
