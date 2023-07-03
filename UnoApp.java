@@ -3,10 +3,13 @@ public class UnoApp {
         Deck deck = new Deck();
         println(deck);
         println(deck.getSize());
-        
     }
 
     public static <T> void println(T thing) {
         System.out.println(thing);
+    }
+
+    public void dealHands() {
+        
     }
 }
