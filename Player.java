@@ -24,4 +24,13 @@ public class Player {
         cardsInHand.addCard(card);
     }
 
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        List<Card> cards = cardsInHand.getCards();
+        for (Card card : cards) {
+            sb.append(card + " ");
+        }
+        return sb.toString();
+    }
+
 }

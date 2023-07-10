@@ -8,8 +8,12 @@ public class Hand {
         cards = new ArrayList<>();
     }
 
-     public int getSize() {
+    public int getSize() {
         return cards.size();
+    }
+
+    public List<Card> getCards() {
+        return Collections.unmodifiableList(cards);
     }
 
     public void addCard(Card card) {
@@ -19,12 +23,13 @@ public class Hand {
         cards.add(card);
     }
 
-     public void addMultipleCards(List<Card> cards) {
+    public void addMultipleCards(List<Card> cards) {
         this.cards.addAll(cards);
     }
 
     public void discardCards(List<Card> removed) {
         cards.removeAll(removed);
     }
+
 
 }

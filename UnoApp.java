@@ -10,8 +10,8 @@ public class UnoApp {
         players[3] = new Player("Oscar");
         
         Deck deck = new Deck();
-        println(deck);
         println(deck.getSize());
+        dealHands(players, deck);
        
     }
 
@@ -19,12 +19,16 @@ public class UnoApp {
         System.out.println(thing);
     }
 
-    public void dealHands(Player[] players, Deck deck) {
+    public static void dealHands(Player[] players, Deck deck) {
         for (int i = 0; i < STARTING_HAND; i++) {
             for (Player player : players) {
                 Card card = deck.dealCard();
                 player.addCard(card);
             }
+        }
+
+        for(Player player : players) {
+            println(player);
         }
     }
 }
